@@ -1,22 +1,47 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NavProxyService } from '../services/NavProxy.service';
+import { ItemsPage } from '../pages/items/items';
+import { PlaceholderPage } from '../pages/placeholder/placeholder';
 
-import { HomePage } from '../pages/home/home';
 @Component({
-  templateUrl: 'app.html'
+    templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
-    });
-  }
+    // Grab References to our 2 NavControllers...
+    @ViewChild('detailNav') detailNav: Nav;
+    @ViewChild('masterNav') masterNav: Nav;
+
+    // Empty placeholders for the 'master/detail' pages...
+    masterPage: any = null;
+    detailPage: any = null;
+
+    constructor(
+        platform: Platform,
+        statusBar: StatusBar,
+        splashScreen: SplashScreen,
+        private navProxy: NavProxyService) {
+
+        platform.ready().then(() => {
+
+            statusBar.styleDefault();
+            splashScreen.hide();
+
+            // Add our nav controllers to
+            // the nav proxy service...
+            navProxy.masterNav = this.masterNav;
+            navProxy.detailNav = this.detailNav;
+
+            // set initial pages for
+            // our nav controllers...
+            this.masterNav.setRoot(ItemsPage, { detailNavCtrl: this.detailNav });
+            this.detailNav.setRoot(PlaceholderPage);
+
+        });
+
+    }
 }
 
