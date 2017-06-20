@@ -40,6 +40,9 @@ export class ItemsPage extends _MasterPage {
     }
 
     onItemSelected(item) {
+        // Rather than using:
+        //     this.navCtrl.push(...)
+        // Use our proxy:
         this.navProxy.pushDetail(ItemPage, item);
     }
 
