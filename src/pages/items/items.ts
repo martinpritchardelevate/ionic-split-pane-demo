@@ -15,8 +15,6 @@ import {
 })
 export class ItemsPage extends _MasterPage {
 
-    detailNavCtrl: NavController = null
-
     items: Array<any> = [
         { id: 0, description: 'List Item Zero' },
         { id: 1, description: 'List Item One' },
@@ -35,8 +33,6 @@ export class ItemsPage extends _MasterPage {
         public navParams: NavParams,
         private navProxy: NavProxyService) {
         super();
-        this.detailNavCtrl = navParams.data.detailNavCtrl;
-
     }
 
     onItemSelected(item) {
