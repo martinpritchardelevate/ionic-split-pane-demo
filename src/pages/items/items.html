@@ -1,21 +1,26 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>Items</ion-title>
-    </ion-navbar>
+    <ion-toolbar>
+        <button menuToggle ion-button icon-only>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Items
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-list>
         <button ion-item *ngFor="let item of items" (click)="onItemSelected(item)">
-      <h2>
-        {{ item.description }}
-      </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Molestiae dolor nesciunt dolore, esse excepturi nemo, atque doloribus.
-        A praesentium, doloremque, quibusdam esse, fugiat quas, obcaecati non
-        laboriosam ducimus natus vero.
-      </p>
-    </button>
+            <h2>
+                {{ item.description }}
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Molestiae dolor nesciunt dolore, esse excepturi nemo, atque doloribus.
+                A praesentium, doloremque, quibusdam esse, fugiat quas, obcaecati non
+                laboriosam ducimus natus vero.
+            </p>
+        </button>
     </ion-list>
 </ion-content>
