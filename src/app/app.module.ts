@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import {
     ItemsPage,
     ItemPage,
+    ItemsHerePage,
     PlaceholderPage } from '../pages';
 
 @NgModule({
@@ -15,6 +16,7 @@ import {
         MyApp,
         ItemsPage,
         ItemPage,
+        ItemsHerePage,
         PlaceholderPage
     ],
     imports: [
@@ -25,6 +27,7 @@ import {
     entryComponents: [
         MyApp,
         ItemsPage,
+        ItemsHerePage,
         ItemPage,
         PlaceholderPage
     ],

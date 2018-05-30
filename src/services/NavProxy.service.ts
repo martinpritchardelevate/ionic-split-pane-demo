@@ -38,10 +38,10 @@ export class NavProxyService {
         }
     }
 
-    pushMaster(page: any, params: any) {
+    pushMaster(page: any, params?: any) {
         this.masterNav.push(page, params);
     }
-
+    
     onSplitPaneChanged(isOn) {
         // set local 'isOn' flag...
         this.isOn = isOn;

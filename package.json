@@ -24,9 +24,12 @@
     "@ionic-native/splash-screen": "3.10.2",
     "@ionic-native/status-bar": "3.10.2",
     "@ionic/storage": "2.0.1",
+    "cordova": "^8.0.0",
+    "ionic": "^3.20.0",
     "ionic-angular": "3.4.2",
     "ionicons": "3.0.0",
     "rxjs": "5.4.0",
+    "strip-ansi": "^3.0.1",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.12"
   },

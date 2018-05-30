@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NavProxyService } from '../services/NavProxy.service';
 import { ItemsPage } from '../pages/items/items';
+import { ItemsHerePage } from '../pages/items-here/items-here'
 import { PlaceholderPage } from '../pages/placeholder/placeholder';
 
 @Component({
@@ -42,6 +43,17 @@ export class MyApp {
 
         });
 
+    }
+
+    onMenuItemChanged(menuItem){
+
+        if(menuItem === 'ItemsPage'){
+            this.navProxy.pushMaster(ItemsPage);
+        }
+
+        if(menuItem === 'ItemsHerePage'){
+            this.navProxy.pushMaster(ItemsHerePage);
+        }
     }
 }
 
