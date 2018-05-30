@@ -13,7 +13,7 @@ import { _MasterPage } from '../pages';
 })
 export class MyApp {
 
-    masterPages: Array<{title: string, component: _MasterPage}>;
+    masterPages: Array<{title: string, icon: string, component: _MasterPage}>;
 
     // Grab References to our 2 NavControllers...
     @ViewChild('detailNav') detailNav: Nav;
@@ -31,8 +31,8 @@ export class MyApp {
         private menu: MenuController) {
 
         this.masterPages = [
-            {title : "One", component: ItemsPage},
-            {title: "Two", component: ItemsHerePage}
+            {title : "One", icon: "star", component: ItemsPage},
+            {title: "Two", icon: "appstore", component: ItemsHerePage}
         ];
 
         platform.ready().then(() => {

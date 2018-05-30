@@ -8,7 +8,7 @@
                                     <ion-icon  name="ionic"></ion-icon>
                                     </div>
                         <div class="menu-item" *ngFor="let p of masterPages" (click)="onMenuItemChanged(p)">
-                        <ion-icon  name="star"></ion-icon>
+                                <ion-icon  name="{{p.icon}}"></ion-icon>
                         </div>
                     </ion-list>
                 </ion-content>
