@@ -24,10 +24,14 @@ $app-direction: ltr;
 
 
 $universal-menu-width: 100px;
+$universal-background-color: white;
 
 $split-pane-side-min-width: $universal-menu-width;
 $split-pane-side-width : $universal-menu-width;
 $toolbar-md-height: $universal-menu-width;
+
+$background-ios-color: $universal-background-color;
+$background-md-color: $universal-background-color;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -41,7 +45,7 @@ $colors: (
   primary:    #488aff,
   secondary:  #32db64,
   danger:     #f53d3d,
-  light:      #f4f4f4,
+  light:      white,
   dark:       #222
 );
 

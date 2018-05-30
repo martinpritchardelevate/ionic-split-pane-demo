@@ -58,3 +58,8 @@ ion-menu {
         vertical-align: middle;
     }
 }
+
+    .scroll-content{
+        // just make it always white. 
+        background-color : $universal-background-color;
+    }
