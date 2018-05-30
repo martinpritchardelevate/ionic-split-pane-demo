@@ -38,9 +38,9 @@
 ion-menu {
     max-width: 40px !important;
     .menu-item {
-        border: 1px solid #ddd;
-        width: 100px;
-        height: 100px;
+        border-bottom: 1px solid #ddd; // border-bottom better? 
+        width: $universal-menu-width;
+        height: $universal-menu-height;
         font-size: 2em;
         display: flex;
         justify-content: center;
@@ -59,7 +59,21 @@ ion-menu {
     }
 }
 
-    .scroll-content{
-        // just make it always white. 
-        background-color : $universal-background-color;
-    }
+.scroll-content {
+    // just make it always white. 
+    background-color: $universal-background-color;
+}
+
+//header header-md header-md-primary
+.navigation-header {
+    position: fixed;
+    margin: 0;
+}
+
+.header-md::after, 
+.tabs-md[tabsPlacement="top"] > .tabbar::after, 
+.footer-md::before, 
+.tabs-md[tabsPlacement="bottom"] > .tabbar::before
+{
+    position:fixed;
+}
