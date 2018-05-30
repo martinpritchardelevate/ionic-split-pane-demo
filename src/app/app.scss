@@ -15,7 +15,7 @@
 
 // Ionic 'Split Pane' styles need to be tweaked to
 // get this 'master-detail' example to work!
-$menu-width: 100px;
+
 
 .split-pane-side:not(ion-menu) {
     display: initial;
@@ -39,4 +39,7 @@ $menu-width: 100px;
     overflow: hidden;
 }
 
+ion-menu{
+    max-width: 40px!important;
+}
 

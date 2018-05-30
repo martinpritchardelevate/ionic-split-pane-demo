@@ -31,8 +31,8 @@ export class MyApp {
         private menu: MenuController) {
 
         this.masterPages = [
-            {title : "Items Page", component: ItemsPage},
-            {title: "Items Here Page", component: ItemsHerePage}
+            {title : "One", component: ItemsPage},
+            {title: "Two", component: ItemsHerePage}
         ];
 
         platform.ready().then(() => {

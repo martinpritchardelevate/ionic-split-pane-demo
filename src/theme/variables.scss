@@ -4,7 +4,7 @@
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
-$menu-width: 100px;
+
 
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
@@ -23,7 +23,11 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 
+$universal-menu-width: 100px;
 
+$split-pane-side-min-width: $universal-menu-width;
+$split-pane-side-width : $universal-menu-width;
+$toolbar-md-height: $universal-menu-width;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -73,6 +77,7 @@ $colors: (
 @import "ionic.theme.default";
 
 
+
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
@@ -86,3 +91,6 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+
