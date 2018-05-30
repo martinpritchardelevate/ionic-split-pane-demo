@@ -13,9 +13,7 @@ import { _MasterPage } from '../pages';
 })
 export class MyApp {
 
-    // master pages declaration
-    private ItemsMasterPage : _MasterPage;
-    private ItemsHereMasterPage : _MasterPage;
+    masterPages: Array<{title: string, component: _MasterPage}>;
 
     // Grab References to our 2 NavControllers...
     @ViewChild('detailNav') detailNav: Nav;
@@ -32,10 +30,12 @@ export class MyApp {
         private navProxy: NavProxyService, 
         private menu: MenuController) {
 
-        platform.ready().then(() => {
+        this.masterPages = [
+            {title : "Items Page", component: ItemsPage},
+            {title: "Items Here Page", component: ItemsHerePage}
+        ];
 
-            this.ItemsMasterPage = ItemsPage;
-            this.ItemsHereMasterPage = ItemsHerePage;
+        platform.ready().then(() => {
 
             statusBar.styleDefault();
             splashScreen.hide();
@@ -54,9 +54,9 @@ export class MyApp {
 
     }
 
-    onMenuItemChanged(menuItem : _MasterPage){
+    onMenuItemChanged(menuItem){
         //console.log(menuItem);
-        this.navProxy.pushMaster(menuItem);
+        this.navProxy.pushMaster(menuItem.component);
         this.menu.close();
     }
 }

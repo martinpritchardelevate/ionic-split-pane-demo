@@ -12,7 +12,7 @@ import {
 @Component({
     selector: 'page-items-here',
     templateUrl: 'items-here.html',
-})
+})      
 export class ItemsHerePage extends _MasterPage {
 
     items: Array<any> = [
