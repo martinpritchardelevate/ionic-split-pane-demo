@@ -41,5 +41,29 @@
 
 ion-menu{
     max-width: 40px!important;
+    .menu-item{
+        border:1px solid #ddd;
+    width: 100px;
+    height: 100px;
+    font-size:2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ion-icon{
+        display: inline-block;
+
+        vertical-align: middle;
+       margin: 0 auto;
+        }
+    }
+    .menu-item:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+
+      }        
+    
+
 }
 
