@@ -41,8 +41,9 @@ export class NavProxyService {
     pushMaster(page: any, params?: any) {
         this.masterNav.push(page, params);
     }
-    
+
     onSplitPaneChanged(isOn) {
+        console.log('inside onsplitpanelchanged');
         // set local 'isOn' flag...
         this.isOn = isOn;
         // if the nav controllers have been instantiated...
@@ -53,14 +54,22 @@ export class NavProxyService {
     }
 
     activateSplitView() {
+        console.log('inside activate split view');
         let currentView = this.masterNav.getActive();
-        if (currentView.component.prototype instanceof _DetailPage) {
-            // if the current view is a 'Detail' page...
-            // - remove it from the 'master' nav stack...
-            this.masterNav.pop();
-            // - and add it to the 'detail' nav stack...
-            this.detailNav.setRoot(currentView.component, currentView.data);
+        if (currentView != null && currentView.component != null) {
+            if (currentView.component.prototype instanceof _DetailPage) {
+                console.log('this is a detail page');
+                // if the current view is a 'Detail' page...
+                // - remove it from the 'master' nav stack...
+                this.masterNav.pop();
+                // - and add it to the 'detail' nav stack...
+                this.detailNav.setRoot(currentView.component, currentView.data);
+            }
+            else {
+                console.log('this is not a detail page');
+            }
         }
+
     }
 
     deactivateSplitView() {

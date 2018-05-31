@@ -6,18 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { NavProxyService } from '../services/NavProxy.service';
 import { MyApp } from './app.component';
 import {
-    ItemsPage,
-    ItemPage,
-    ItemsHerePage,
-    PlaceholderPage } from '../pages';
+    LoginPage, MainPage, PlaceholderPage, ItemPage, ItemsPage, ItemsHerePage } from '../pages';
 
 @NgModule({
     declarations: [
         MyApp,
-        ItemsPage,
-        ItemPage,
-        ItemsHerePage,
-        PlaceholderPage
+        LoginPage, MainPage, PlaceholderPage, ItemPage, ItemsPage, ItemsHerePage
     ],
     imports: [
         BrowserModule,
@@ -26,10 +20,12 @@ import {
     bootstrap: [IonicApp],
     entryComponents: [
         MyApp,
-        ItemsPage,
-        ItemsHerePage,
-        ItemPage,
-        PlaceholderPage
+        LoginPage, 
+        MainPage, 
+        PlaceholderPage, 
+        ItemPage, 
+        ItemsHerePage, 
+        ItemsPage
     ],
     providers: [
         NavProxyService,
