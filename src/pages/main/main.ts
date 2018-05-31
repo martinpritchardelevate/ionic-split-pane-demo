@@ -37,9 +37,7 @@ export class MainPage {
         splashScreen: SplashScreen,
         private navProxy: NavProxyService,
         private menu: MenuController) {
-
-        
-
+        // removed this from the html template: (ionChange)="navProxy.onSplitPaneChanged($event._visible);"
     }
 
     ionViewDidLoad(){
