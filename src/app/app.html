@@ -1,11 +1,1 @@
-<ion-menu [content]="masterNav">
-    <ion-header>
-        <ion-toolbar>
-            <ion-title>Menu</ion-title>
-        </ion-toolbar>
-    </ion-header>
-</ion-menu>
-<ion-split-pane (ionChange)="navProxy.onSplitPaneChanged($event._visible);">
-    <ion-nav [root]="masterPage" #masterNav></ion-nav>
-    <ion-nav [root]="detailPage" #detailNav main></ion-nav>
-</ion-split-pane>
+<ion-nav [root]="rootPage" #content></ion-nav>

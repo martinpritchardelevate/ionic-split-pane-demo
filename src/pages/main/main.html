@@ -1,0 +1,17 @@
+<ion-split-pane>
+  <ion-menu [content]="masterNav" persistent="true">
+      <ion-content no-bounds class="no-scroll">
+          <ion-list>
+              <div class="menu-item">
+                  <ion-icon name="ionic"></ion-icon>
+              </div>
+              <div class="menu-item" *ngFor="let p of masterPages" (click)="onMenuItemChanged(p)">
+                  <ion-icon name="{{p.icon}}"></ion-icon>
+              </div>
+          </ion-list>
+      </ion-content>
+  </ion-menu>
+
+  <ion-nav [root]="masterPage" #masterNav swipeBackEnabled="false"></ion-nav>
+  <ion-nav [root]="detailPage" #detailNav main swipeBackEnabled="false"></ion-nav>
+</ion-split-pane>

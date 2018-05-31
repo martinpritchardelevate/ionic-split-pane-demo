@@ -12,7 +12,6 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
 // Ionic 'Split Pane' styles need to be tweaked to
 // get this 'master-detail' example to work!
 .split-pane-side:not(ion-menu) {
@@ -27,4 +26,54 @@
     .split-pane-main {
         display: block;
     }
+}
+
+.no-scroll {
+    .scroll-content {
+        overflow: hidden;
+    }
+    overflow: hidden;
+}
+
+ion-menu {
+    max-width: 40px !important;
+    .menu-item {
+        border-bottom: 1px solid #ddd; // border-bottom better? 
+        width: $universal-menu-width;
+        height: $universal-menu-height;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ion-icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 auto;
+        }
+    }
+    .menu-item:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.scroll-content {
+    // just make it always white. 
+    background-color: $universal-background-color;
+}
+
+//header header-md header-md-primary
+.navigation-header {
+    position: fixed;
+    margin: 0;
+}
+
+.header-md::after, 
+.tabs-md[tabsPlacement="top"] > .tabbar::after, 
+.footer-md::before, 
+.tabs-md[tabsPlacement="bottom"] > .tabbar::before
+{
+    position:fixed;
 }

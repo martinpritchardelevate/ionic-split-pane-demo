@@ -1,3 +1,11 @@
 page-item {
+    background-color: pink;
+}
 
+
+.no-scroll 
+{
+    .scroll-content {
+        overflow: hidden;
+    }
 }
